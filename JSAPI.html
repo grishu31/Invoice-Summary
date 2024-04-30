@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+<meta http-equiv="Content-Type" content="image/png">
+<title>City Taxi App - New York</title>
+<link rel="icon" href="images/taxi-logo.ico">
+<link rel="stylesheet" href="css/touchTouch.css">
+<link rel="stylesheet" href="css/stuck.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/ihover.css">
+<link rel="stylesheet" href="css/component.css" />
+<link rel="stylesheet" href="css/form.css">
+
+<!-- Actuate CSS -->
+<link rel="stylesheet" type="text/css" href="css/yggdrasil.css" />	
+
+<script src="js/modernizr.custom.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.dlmenu.js"></script>
+<script src="js/script.js"></script>
+<script src="js/superfish.js"></script>
+<script src="js/jquery.equalheights.js"></script>
+<script src="js/tmStickUp.js"></script>
+<script src="js/TMForm.js"></script>
+<script src="js/jquery.ui.totop.js"></script>
+<script src="js/touchTouch.jquery.js"></script>
+<script>
+$(function() {
+  $( '#dl-menu' ).dlmenu();
+});
+</script>
+<script>
+ $(document).ready(function(){
+  $().UItoTop({ easingType: 'easeOutQuart' });
+  $('#stuck_container').tmStickUp({});
+  $('.gallery .gall_item').touchTouch();
+  });
+</script>
+</head>
+<body class="page1" id="top" style="background-color: #222222">
+<style>
+div.actuate-dashboard-view-outerwrapper {
+	padding:0px;
+}
+div.actuateParameterContainer .paramDisplayName {
+	font-size:12pt;
+	padding-bottom:6px;
+}
+.paramBtn {
+	font-size:11pt;
+}
+.actuate-dashboard-non-editable {
+	background:none !important;
+}
+.actuate-window-body {
+	color:black !important;
+}
+.actuate-combo-list-item {
+	color:black !important;
+}
+.ContextMenuItem{
+	color:black !important;
+}
+
+
+</style>
+<!--==============================
+        header + Menu
+=================================-->
+<header>
+  <section id="stuck_container" class="" style="position: relative; top: 0px; z-index: 999; left: 0px; right: 0px; margin: 0px auto;">
+    <div class="container">
+      <div class="row">
+		 <div class="grid_11">
+         <a href="index.html"><img src="images/logo2.png" alt="Logo alt" class="img_inner fright"></a>
+					<div id="dl-menu" class="dl-menuwrapper">
+						<button class="dl-trigger">Open Menu</button>
+						<ul class="dl-menu">
+							<li>
+								<a href="index.html">Main</a>
+							</li>						
+							<li>
+								<a href="#">Your Dashboards</a>
+								<ul class="dl-submenu">
+									<li><a href="JSAPI.html?type=dashboard&city=NYC&report=dummy">New York</a></li>
+									<li><a href="JSAPI.html?type=dashboard&city=SFO&report=dummy">San Francisco</a></li>
+									<li><a href="JSAPI.html?type=dashboard&city=PAR&report=dummy">Paris</a></li>
+									<li><a href="JSAPI.html?type=dashboard&city=TOK&report=dummy">Tokyo</a></li>
+									<li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Your Reports</a>
+								<ul class="dl-submenu">
+									<li><a href="JSAPI.html?type=viewer_params&city=dummy&report=TripListNoPage.rptdesign">Trip summary</a></li>
+									<li><a href="JSAPI.html?type=viewer_params&city=dummy&report=CustomerSatisfaction.rptdesign">Customer satisfaction</a></li>
+									<li><a target="_blank" href="../../executereport.do?__executableName=/Applications/City%20Taxi/Report%20Designs/TripDetail.rptdesign">View an invoice</a></li>
+									<li>
+								</ul>								
+							</li>
+							<li>
+								<a href="#">About</a>
+								<ul class="dl-submenu">
+									<li><a href="company.html">The company</a></li>
+									<li><a href="cars.html">The cars</a></li>
+									<li>
+								</ul>								
+							</li>
+							<li>
+								<a href="contact.html">Contact</a>
+							</li>
+							<li>
+								<a href="../../ssologout.do"><img src="images/logout-24.png">&nbsp;Logout</a></li>
+							</li>
+						</ul>
+					</div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><div class="pseudoStickyBlock" style="position: relative; display: block; height: 4px;"></div>
+</header>
+<!--=====================
+          Content
+======================-->
+<section class="content">
+  <div class="container">
+    <div class="row">
+      <div id='myDiv' class="grid_11_act">
+      	<!--  <div class="wrapper row3"> -->
+			<div id="dashboard">
+				<div id='acMainParams' style="width:400px;">
+					<table>
+						<tr>
+							<td>
+								<div id='acParams' style="visibility:hidden;"></div>
+							</td>
+							<td>
+								<div id='acParamsRun' style="visibility:hidden; padding-left:16px; padding-top:20px;">	
+									<input type="button" class="paramBtn" name="run" value="Run Report" onclick="processParameters( )">
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div id='acShowParams' style="display:none;">
+						<input type="button" class="paramBtn" name="show" value="Show Params" onclick="showParams( )">
+				</div>
+    			<div id='acContainer'></div>
+			</div>
+		<!-- </div> -->
+<!-- 
+<script id='jsapiScript' type='text/javascript' language='JavaScript' src='http://actuateone.localdomain:8700/iportal/jsapi'></script>
+-->
+<script type='text/javascript' language='JavaScript' src='../../jsapi'></script>
+
+<script type='text/javascript'>
+var parameters = location.search.substring(1).split("&");
+var temp = parameters[0].split("=");
+var type = temp[1];
+temp = parameters[1].split("=");
+var city = temp[1];
+temp = parameters[2].split("=");
+var report = temp[1];
+
+debugger;
+var host = location.host
+var parameters = location.pathname.split("/");
+var appName = parameters[3].split('%20').join(' ');
+
+if(type=="dashboard")
+	document.getElementById("myDiv").className = "grid_12_act";
+if (type == "viewer") {
+	actuate.load('viewer');
+}
+else if (type == "viewer_params") {
+	actuate.load('viewer');
+	actuate.load('parameter');
+}
+else {
+	actuate.load('dashboard');
+}
+
+if(type=="viewer") {
+	var reportName = "/Applications/" + appName + "/Report Designs/Mashboard " + city + ".rptdocument";
+	var reportletName = "MainGrid";
+}
+else {
+	//var reportName = "/Applications/City Taxi/Report Designs/TripListNoPage.rptdesign";
+	var reportName = "/Applications/" + appName + "/Report Designs/" + report;
+}
+
+var containerID = "acContainer";
+var dashboardName = "/Applications/" + appName + "/Dashboards/City Taxi - " + city + ".dashboard";
+var param;
+
+var URL = location.href;
+var index = URL.indexOf("://");
+var protocol = URL.substring(0,index);
+					
+var reqOps = new actuate.RequestOptions( );
+reqOps.setRepositoryType(actuate.RequestOptions.REPOSITORY_ENCYCLOPEDIA);
+actuate.initialize( protocol + '://' + host + '/iportal/', reqOps==undefined?null:reqOps, null, null, type=="viewer" ? initViewer : type=="dashboard" ? initDashboard : initParameters);
+
+function initParameters() {
+	debugger;
+	param = new actuate.Parameter("acParams");
+	param.setReportName(reportName);
+	param.submit(showParams);
+	//param.submit(function ( ) {document.getElementById("acParamsRun").style.visibility = 'visible';});	
+	//param.submit(function ( ) {$("#run").hide();});
+}
+function showParams() {
+	debugger;
+	//document.getElementById("acParams").style.visibility = 'visible';
+	document.getElementById("acParamsRun").style.visibility = 'visible';
+	document.getElementById("acMainParams").style.display= 'block';
+	document.getElementById("acShowParams").style.display = 'none';
+
+}
+
+function hideParams() {
+	debugger;
+	//var a = document.getElementById("acParams");
+	//document.getElementById("mainacParams").style.visibility = 'hidden';
+	document.getElementById("acMainParams").style.display= 'none';
+	document.getElementById("acShowParams").style.display = 'block';
+}
+
+function initViewerWithParams(paramValues){
+	debugger;
+	hideParams();
+	viewer = new actuate.Viewer(containerID);
+	var options = new actuate.viewer.UIOptions( );
+	options.enableToolBar(false);
+	viewer.setReportName(reportName);
+	viewer.setParameterValues(paramValues);
+	viewer.setUIOptions( options );
+	viewer.setWidth(1000);
+	viewer.setHeight(700);
+	viewer.submit();
+}
+
+function initViewer(){
+	debugger;
+	document.getElementById("acMainParams").style.display= 'none';
+	viewer = new actuate.Viewer(containerID);
+	var options = new actuate.viewer.UIOptions( );
+	options.enableToolBar(false);
+	viewer.setUIOptions( options );
+	viewer.setReportName(reportName);
+	viewer.setReportletBookmark(reportletName);
+	viewer.setWidth(1000);
+	viewer.setHeight(700);
+	viewer.submit();
+}
+
+function initDashboard(){
+	//debugger;
+	document.getElementById("acMainParams").style.display= 'none';
+	var containerID = "acContainer";
+	dashboard = new actuate.Dashboard(containerID);
+	dashboard.setDashboardName(dashboardName);
+	dashboard.setWidth(1300);
+	dashboard.setHeight(550);
+	dashboard.showTabNavigation(true);
+	dashboard.submit();
+}
+
+
+function processParameters( ) {
+	//param.submit(function ( ) {$("#acParams").hide();});
+	debugger;
+	//param.submit(hideParams);
+	param.downloadParameterValues(initViewerWithParams);
+}
+
+</script>
+      </div>
+    </div>
+  </div>
+</section>
+<!--==============================
+              footer
+=================================-->
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="grid_11">
+        <div class="socials">
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-google-plus"></a>
+          <a href="#" class="fa fa-youtube-play"></a>
+        </div>
+        <div class="copyright"><span class="brand">Web Design</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a> <div>Website designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

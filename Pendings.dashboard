@@ -1,0 +1,1442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201804241733</property>
+    <property name="layoutPreference">auto layout</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">themes/SoftColorThemeReportItem.rptlibrary</property>
+            <property name="namespace">SoftColorThemeReportItem</property>
+        </structure>
+    </list-property>
+    <data-sources>
+        <data-mart-data-source name="NewDataMartDataSource" id="9">
+            <property name="datamartURL">Data Objects/pending</property>
+            <property name="datamartVersion">-1</property>
+            <property name="accessType">latest</property>
+        </data-mart-data-source>
+        <data-mart-data-source name="NewDataMartDataSource1" id="10">
+            <property name="datamartURL">Data Objects/pending</property>
+            <property name="datamartVersion">-1</property>
+            <property name="accessType">transient</property>
+        </data-mart-data-source>
+    </data-sources>
+    <property name="linkedDataModels">
+        <data-mart-linked-data-model name="NewDataMartDataSource::Data Model2" id="154">
+            <property name="dataSource">NewDataMartDataSource</property>
+            <property name="dataObject">Data Model2</property>
+        </data-mart-linked-data-model>
+    </property>
+    <body>
+        <extended-item extensionName="Chart" name="Bar Chart - Data Model2_4e188fe2-fa92-40c8-b3a3-e06a435510ff" id="166">
+            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="SideBySide" orientation="0">
+  <block>
+   <children _type="TitleBlock" visible="false" auto="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption value="">
+      <font size="16.0" bold="false" italic="false" underline="false"/>
+      <color _body=",255,255,255,255"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="false" orientation="1" position="3" wrappingSize="150.0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <text>
+     <font size="10.0"/>
+     <color _body=",255,255,255,255"/>
+    </text>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title visible="true">
+     <caption>
+      <color _body=",255,255,255,255"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body=",,377.25,"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+   <background _body=",255,34,34,34"/>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="keep.hierarchy.category" value="true"/>
+  <extendedProperties name="keep.hierarchy.series" value="true"/>
+  <extendedProperties name="enable.data.summarize" value="false"/>
+  <extendedProperties name="jschart.glass.style" value="false"/>
+  <extendedProperties name="jschart.zoom" value="xy"/>
+  <extendedProperties name="jschart.range.selector" value="false"/>
+  <extendedProperties name="jschart.navigator" value="false"/>
+  <extendedProperties name="jschart.scroll" value="true"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.client.script" value="beforeGeneration:function(o){if(o&amp;&amp;o.chart&amp;&amp;o.chart.renderTo){var r=document.getElementById(o.chart.renderTo);if(r.parentNode&amp;&amp;r.parentNode.id){var b=r.parentNode.id;var v=actuate.getViewer(b);if(v){v.enableGlobalFilter(o);}}}}"/>
+  <extendedProperties name="enable.legend.itemHoverStyle" value="#FFFFFF"/>
+  <extendedProperties name="enable.column.pointPadding" value="0.02"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="QWER"/>
+   <orthogonalSampleData dataSetRepresentation="QWER" seriesDefinitionIndex="0"/>
+  </sampleData>
+  <interactivity enable="true" legendBehavior="1"/>
+  <emptyMessage visible="true">
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="2" gapWidth="0.5" labelPosition="1" staggered="false" interval="1" categoryAxis="true">
+   <title visible="true">
+    <caption value="Entity">
+     <font size="10.0" bold="true" italic="false" underline="false" rotation="90.0"/>
+     <color _body=",255,255,255,255"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes type="0" labelPosition="2" staggered="false" primaryAxis="true" percent="false">
+    <title visible="true">
+     <caption value="Count">
+      <font size="10.0" bold="true" italic="false" underline="false" rotation="0.0"/>
+      <color _body=",255,255,255,255"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="BarSeries" seriesIdentifier="invoice_no" labelPosition="5" stacked="false">
+      <label>
+       <caption value="invoice_no">
+        <color _body=",255,255,255,255"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;invoice_no2&quot;]">
+       <grouping enabled="true" aggregateExpression="Count"/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="0"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label visible="true">
+     <caption>
+      <font size="10.0" bold="false" italic="false" underline="false" rotation="0.0"/>
+      <color _body=",255,255,255,255"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _body=",255,102,102,102"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <scale step="0.0" stepNumber="1"/>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions sorting="0">
+    <query definition=""/>
+    <series seriesIdentifier="entity_id">
+     <label>
+      <caption value="entity_id"/>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;entity_id&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupingInterval="0.0"/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _body=",255,102,102,102"/>
+   </lineAttributes>
+   <label visible="true">
+    <caption>
+     <font size="10.0" bold="false" italic="false" underline="false" rotation="0.0"/>
+     <color _body=",255,255,255,255"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes visible="false">
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+            <property name="outputFormat">JS</property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">is-not-null</property>
+                    <expression name="expr">dataSetRow["entity_id"]</expression>
+                    <property name="filterTarget">DataSet</property>
+                    <property name="type">slicer</property>
+                </structure>
+                <structure>
+                    <property name="operator">not-in</property>
+                    <expression name="expr">dataSetRow["invoice_status1"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="constant">Invoice Cancelled</value>
+                        <value type="constant">Rejected - Duplicate invoice</value>
+                    </simple-property-list>
+                    <property name="filterTarget">DataSet</property>
+                    <property name="type">slicer</property>
+                </structure>
+            </list-property>
+            <property name="height">158.25pt</property>
+            <property name="width">377.25pt</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">entity_id</property>
+                    <text-property name="displayName">entity_id</text-property>
+                    <expression name="expression">dataSetRow["entity_id"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">invoice_no2</property>
+                    <text-property name="displayName">invoice_no</text-property>
+                    <expression name="expression">dataSetRow["invoice_no2"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <property name="theme">SoftColorThemeReportItem.Soft color</property>
+            <property name="linkedDataModel">NewDataMartDataSource::Data Model2</property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">copyHyperlink</property>
+                    <property name="type">string</property>
+                </structure>
+                <structure>
+                    <property name="name">createdBy</property>
+                    <property name="type">string</property>
+                </structure>
+            </list-property>
+            <property name="copyHyperlink">true</property>
+            <property name="createdBy">dashboard</property>
+        </extended-item>
+        <extended-item extensionName="Chart" name="Bar Chart - Data Model2 1_b1e9c41a-fc81-42d8-aa40-344cd9e2006d" id="170">
+            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="SideBySide" orientation="0">
+  <block>
+   <children _type="TitleBlock" visible="false" auto="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption value="">
+      <font size="16.0" bold="false" italic="false" underline="false"/>
+      <color _body=",255,255,255,255"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="false" orientation="1" position="3" wrappingSize="150.0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <text>
+     <font size="10.0"/>
+     <color _body=",255,255,255,255"/>
+    </text>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title visible="true">
+     <caption>
+      <color _body=",255,255,255,255"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body=",,377.25,"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+   <background _body=",255,34,34,34"/>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.range.selector" value="false"/>
+  <extendedProperties name="jschart.navigator" value="false"/>
+  <extendedProperties name="jschart.scroll" value="true"/>
+  <extendedProperties name="keep.hierarchy.category" value="true"/>
+  <extendedProperties name="keep.hierarchy.series" value="true"/>
+  <extendedProperties name="enable.data.summarize" value="false"/>
+  <extendedProperties name="jschart.glass.style" value="false"/>
+  <extendedProperties name="jschart.zoom" value="xy"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.client.script" value="beforeGeneration:function(o){if(o&amp;&amp;o.chart&amp;&amp;o.chart.renderTo){var r=document.getElementById(o.chart.renderTo);if(r.parentNode&amp;&amp;r.parentNode.id){var b=r.parentNode.id;var v=actuate.getViewer(b);if(v){v.enableGlobalFilter(o);}}}}"/>
+  <extendedProperties name="enable.legend.itemHoverStyle" value="#FFFFFF"/>
+  <extendedProperties name="enable.column.pointPadding" value="0.02"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="QWER"/>
+   <orthogonalSampleData dataSetRepresentation="QWER" seriesDefinitionIndex="0"/>
+  </sampleData>
+  <interactivity enable="true" legendBehavior="1"/>
+  <emptyMessage visible="true">
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="2" gapWidth="0.5" labelPosition="1" staggered="false" interval="1" categoryAxis="true">
+   <title visible="true">
+    <caption value="AP Executive">
+     <font size="10.0" bold="true" italic="false" underline="false" rotation="90.0"/>
+     <color _body=",255,255,255,255"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes type="0" labelPosition="2" staggered="false" primaryAxis="true" percent="false">
+    <title visible="true">
+     <caption value="Count">
+      <font size="10.0" bold="true" italic="false" underline="false" rotation="0.0"/>
+      <color _body=",255,255,255,255"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="BarSeries" seriesIdentifier="invoice_no" labelPosition="5" stacked="false">
+      <label>
+       <caption value="invoice_no">
+        <color _body=",255,255,255,255"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;invoice_no2&quot;]">
+       <grouping enabled="true" aggregateExpression="Count"/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="0"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label visible="true">
+     <caption>
+      <font size="10.0" bold="false" italic="false" underline="false" rotation="0.0"/>
+      <color _body=",255,255,255,255"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _body=",255,102,102,102"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <scale step="0.0" stepNumber="1"/>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions sorting="0">
+    <query definition=""/>
+    <series seriesIdentifier="processed_by">
+     <label>
+      <caption value="processed_by"/>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;processed_by&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupingInterval="0.0"/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _body=",255,102,102,102"/>
+   </lineAttributes>
+   <label visible="true">
+    <caption>
+     <font size="10.0" bold="false" italic="false" underline="false" rotation="0.0"/>
+     <color _body=",255,255,255,255"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes visible="false">
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+            <property name="outputFormat">JS</property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">not-in</property>
+                    <expression name="expr">dataSetRow["invoice_status1"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="constant">Rejected - Duplicate invoice</value>
+                        <value type="constant">Invoice Cancelled</value>
+                    </simple-property-list>
+                    <property name="filterTarget">DataSet</property>
+                    <property name="type">slicer</property>
+                </structure>
+            </list-property>
+            <property name="height">159pt</property>
+            <property name="width">377.25pt</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">processed_by</property>
+                    <text-property name="displayName">processed_by</text-property>
+                    <expression name="expression">dataSetRow["processed_by"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">invoice_no2</property>
+                    <text-property name="displayName">invoice_no</text-property>
+                    <expression name="expression">dataSetRow["invoice_no2"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <property name="theme">SoftColorThemeReportItem.Soft color</property>
+            <property name="linkedDataModel">NewDataMartDataSource::Data Model2</property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">copyHyperlink</property>
+                    <property name="type">string</property>
+                </structure>
+                <structure>
+                    <property name="name">createdBy</property>
+                    <property name="type">string</property>
+                </structure>
+            </list-property>
+            <property name="copyHyperlink">true</property>
+            <property name="createdBy">dashboard</property>
+        </extended-item>
+        <extended-item extensionName="Chart" name="Bar Chart - Data Model2 2_178c2fbf-1e9b-403f-a89e-cf25c6d1a941" id="174">
+            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="SideBySide" orientation="0">
+  <block>
+   <children _type="TitleBlock" visible="false" auto="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption value="">
+      <font size="16.0" bold="false" italic="false" underline="false"/>
+      <color _body=",255,255,255,255"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="false" orientation="1" position="3" wrappingSize="150.0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <text>
+     <font size="10.0" bold="false" italic="false" underline="false"/>
+     <color _body=",255,255,255,255"/>
+    </text>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title visible="true">
+     <caption>
+      <font bold="false" italic="false" underline="false"/>
+      <color _body=",255,255,255,255"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body=",,377.25,"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+   <background _body=",255,34,34,34"/>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.range.selector" value="false"/>
+  <extendedProperties name="jschart.navigator" value="false"/>
+  <extendedProperties name="jschart.scroll" value="true"/>
+  <extendedProperties name="keep.hierarchy.category" value="true"/>
+  <extendedProperties name="keep.hierarchy.series" value="true"/>
+  <extendedProperties name="enable.data.summarize" value="false"/>
+  <extendedProperties name="jschart.glass.style" value="false"/>
+  <extendedProperties name="jschart.zoom" value="xy"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.client.script" value="beforeGeneration:function(o){&#13;&#10;this.initGlobalFilters(o);&#13;&#10; &#13;&#10;this.initGlobalFilters(o);&#13;&#10; &#13;&#10;this.initGlobalFilters(o);&#13;&#10; if(o&amp;&amp;o.chart&amp;&amp;o.chart.renderTo){var r=document.getElementById(o.chart.renderTo);if(r.parentNode&amp;&amp;r.parentNode.id){var b=r.parentNode.id;var v=actuate.getViewer(b);if(v){v.enableGlobalFilter(o);}}}},&#13;&#10;initGlobalFilters:function(o){if(o&amp;&amp;o.chart&amp;&amp;o.chart.renderTo){var r=document.getElementById(o.chart.renderTo);if(r.parentNode&amp;&amp;r.parentNode.id){var b=r.parentNode.id;var v=actuate.getViewer(b);if(v){v.enableGlobalFilter(o);}}}},&#13;&#10;initGlobalFilters:function(o){if(o&amp;&amp;o.chart&amp;&amp;o.chart.renderTo){var r=document.getElementById(o.chart.renderTo);if(r.parentNode&amp;&amp;r.parentNode.id){var b=r.parentNode.id;var v=actuate.getViewer(b);if(v){v.enableGlobalFilter(o);}}}},&#13;&#10;initGlobalFilters:function(o){if(o&amp;&amp;o.chart&amp;&amp;o.chart.renderTo){var r=document.getElementById(o.chart.renderTo);if(r.parentNode&amp;&amp;r.parentNode.id){var b=r.parentNode.id;var v=actuate.getViewer(b);if(v){v.enableGlobalFilter(o);}}}}&#13;&#10;&#13;&#10;&#13;&#10;"/>
+  <extendedProperties name="enable.legend.itemHoverStyle" value="#FFFFFF"/>
+  <extendedProperties name="enable.column.pointPadding" value="0.02"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="QWER"/>
+   <orthogonalSampleData dataSetRepresentation="2.3" seriesDefinitionIndex="0"/>
+  </sampleData>
+  <interactivity enable="true" legendBehavior="1"/>
+  <emptyMessage visible="true">
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="2" gapWidth="0.5" labelPosition="1" staggered="false" interval="1" categoryAxis="true">
+   <title visible="true">
+    <caption value="Entity ">
+     <font size="10.0" bold="true" italic="false" underline="false" rotation="90.0"/>
+     <color _body=",255,255,255,255"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes type="0" labelPosition="2" staggered="false" primaryAxis="true" percent="false">
+    <title visible="true">
+     <caption value="Amount">
+      <font size="10.0" bold="true" italic="false" underline="false" rotation="0.0"/>
+      <color _body=",255,255,255,255"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="BarSeries" seriesIdentifier="grand_total" labelPosition="5" stacked="false">
+      <label visible="false">
+       <caption value="grand_total">
+        <color _body=",255,255,255,255"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;grand_total2&quot;]">
+       <grouping enabled="true"/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="0"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label visible="true">
+     <caption>
+      <font size="10.0" bold="false" italic="false" underline="false" rotation="0.0"/>
+      <color _body=",255,255,255,255"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _body=",255,102,102,102"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <scale step="0.0" unit="6" stepNumber="1"/>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions sorting="0">
+    <query definition=""/>
+    <series seriesIdentifier="entity_id">
+     <label>
+      <caption value="entity_id"/>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;entity_id&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupingInterval="0.0"/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _body=",255,102,102,102"/>
+   </lineAttributes>
+   <label visible="true">
+    <caption>
+     <font size="10.0" bold="false" italic="false" underline="false" rotation="0.0"/>
+     <color _body=",255,255,255,255"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes visible="false">
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+            <property name="outputFormat">JS</property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">is-not-null</property>
+                    <expression name="expr">dataSetRow["entity_id"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="constant" isNull="true"/>
+                    </simple-property-list>
+                    <property name="filterTarget">DataSet</property>
+                    <property name="type">slicer</property>
+                </structure>
+                <structure>
+                    <property name="operator">not-in</property>
+                    <expression name="expr">dataSetRow["invoice_status1"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="constant">Invoice Cancelled</value>
+                        <value type="constant">Rejected - Duplicate invoice</value>
+                    </simple-property-list>
+                    <property name="filterTarget">DataSet</property>
+                    <property name="type">slicer</property>
+                </structure>
+            </list-property>
+            <property name="height">159pt</property>
+            <property name="width">377.25pt</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">entity_id</property>
+                    <text-property name="displayName">entity_id</text-property>
+                    <expression name="expression">dataSetRow["entity_id"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">grand_total2</property>
+                    <text-property name="displayName">grand_total</text-property>
+                    <expression name="expression">dataSetRow["grand_total2"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+            </list-property>
+            <property name="theme">SoftColorThemeReportItem.Soft color</property>
+            <property name="linkedDataModel">NewDataMartDataSource::Data Model2</property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">copyHyperlink</property>
+                    <property name="type">string</property>
+                </structure>
+                <structure>
+                    <property name="name">createdBy</property>
+                    <property name="type">string</property>
+                </structure>
+            </list-property>
+            <property name="copyHyperlink">true</property>
+            <property name="createdBy">dashboard</property>
+        </extended-item>
+        <extended-item extensionName="Chart" name="Bar Chart - Data Model2 3_c64405f7-3c53-452c-9553-b8c6b5edaa24" id="178">
+            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="SideBySide" orientation="0">
+  <block>
+   <children _type="TitleBlock" visible="false" auto="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption value="">
+      <font size="16.0" bold="false" italic="false" underline="false"/>
+      <color _body=",255,255,255,255"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="false" orientation="1" position="3" wrappingSize="150.0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <text>
+     <font size="10.0" bold="false" italic="false" underline="false"/>
+     <color _body=",255,255,255,255"/>
+    </text>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title visible="true">
+     <caption>
+      <font bold="false" italic="false" underline="false"/>
+      <color _body=",255,255,255,255"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body=",,377.25,"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+   <background _body=",255,34,34,34"/>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.range.selector" value="false"/>
+  <extendedProperties name="jschart.navigator" value="false"/>
+  <extendedProperties name="jschart.scroll" value="true"/>
+  <extendedProperties name="keep.hierarchy.category" value="true"/>
+  <extendedProperties name="keep.hierarchy.series" value="true"/>
+  <extendedProperties name="enable.data.summarize" value="false"/>
+  <extendedProperties name="jschart.glass.style" value="false"/>
+  <extendedProperties name="jschart.zoom" value="xy"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.client.script" value="beforeGeneration:function(o){&#13;&#10;this.initGlobalFilters(o);&#13;&#10; if(o&amp;&amp;o.chart&amp;&amp;o.chart.renderTo){var r=document.getElementById(o.chart.renderTo);if(r.parentNode&amp;&amp;r.parentNode.id){var b=r.parentNode.id;var v=actuate.getViewer(b);if(v){v.enableGlobalFilter(o);}}}},&#13;&#10;initGlobalFilters:function(o){if(o&amp;&amp;o.chart&amp;&amp;o.chart.renderTo){var r=document.getElementById(o.chart.renderTo);if(r.parentNode&amp;&amp;r.parentNode.id){var b=r.parentNode.id;var v=actuate.getViewer(b);if(v){v.enableGlobalFilter(o);}}}}&#13;&#10;"/>
+  <extendedProperties name="enable.legend.itemHoverStyle" value="#FFFFFF"/>
+  <extendedProperties name="enable.column.pointPadding" value="0.02"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="QWER"/>
+   <orthogonalSampleData dataSetRepresentation="2.3" seriesDefinitionIndex="0"/>
+  </sampleData>
+  <interactivity enable="true" legendBehavior="1"/>
+  <emptyMessage visible="true">
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="2" gapWidth="0.5" labelPosition="1" staggered="false" interval="1" categoryAxis="true">
+   <title visible="true">
+    <caption value="Executive">
+     <font size="10.0" bold="true" italic="false" underline="false" rotation="90.0"/>
+     <color _body=",255,255,255,255"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes type="0" labelPosition="2" staggered="false" primaryAxis="true" percent="false">
+    <title visible="true">
+     <caption value="Amount">
+      <font size="10.0" bold="true" italic="false" underline="false" rotation="0.0"/>
+      <color _body=",255,255,255,255"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="BarSeries" seriesIdentifier="grand_total" labelPosition="5" stacked="false">
+      <label visible="false">
+       <caption value="grand_total">
+        <color _body=",255,255,255,255"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;grand_total2&quot;]">
+       <grouping enabled="true"/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="0"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label visible="true">
+     <caption>
+      <font size="10.0" bold="false" italic="false" underline="false" rotation="0.0"/>
+      <color _body=",255,255,255,255"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _body=",255,102,102,102"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <scale step="0.0" unit="6" stepNumber="1"/>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions sorting="0">
+    <query definition=""/>
+    <series seriesIdentifier="processed_by">
+     <label>
+      <caption value="processed_by"/>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;processed_by&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupingInterval="0.0"/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _body=",255,102,102,102"/>
+   </lineAttributes>
+   <label visible="true">
+    <caption>
+     <font size="10.0" bold="false" italic="false" underline="false" rotation="0.0"/>
+     <color _body=",255,255,255,255"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes visible="false">
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+            <property name="outputFormat">JS</property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">not-in</property>
+                    <expression name="expr">dataSetRow["invoice_status1"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="constant">Invoice Cancelled</value>
+                        <value type="constant">Rejected - Duplicate invoice</value>
+                    </simple-property-list>
+                    <property name="filterTarget">DataSet</property>
+                    <property name="type">slicer</property>
+                </structure>
+            </list-property>
+            <property name="height">157.5pt</property>
+            <property name="width">377.25pt</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">processed_by</property>
+                    <text-property name="displayName">processed_by</text-property>
+                    <expression name="expression">dataSetRow["processed_by"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">grand_total2</property>
+                    <text-property name="displayName">grand_total</text-property>
+                    <expression name="expression">dataSetRow["grand_total2"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+            </list-property>
+            <property name="theme">SoftColorThemeReportItem.Soft color</property>
+            <property name="linkedDataModel">NewDataMartDataSource::Data Model2</property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">copyHyperlink</property>
+                    <property name="type">string</property>
+                </structure>
+                <structure>
+                    <property name="name">createdBy</property>
+                    <property name="type">string</property>
+                </structure>
+            </list-property>
+            <property name="copyHyperlink">true</property>
+            <property name="createdBy">dashboard</property>
+        </extended-item>
+    </body>
+    <property name="dashboardView">
+        <dashboard id="2">
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">themeCustomFormatOverride</property>
+                    <property name="type">string</property>
+                </structure>
+                <structure>
+                    <property name="name">dashboardTheme</property>
+                    <property name="type">string</property>
+                </structure>
+            </list-property>
+            <property name="themeCustomFormatOverride">false</property>
+            <property name="dashboardTheme">SoftColorThemeReportItem.Soft color:Dark</property>
+            <property name="activeTab">66e31a72-fa55-4a8f-9b70-ef0f9aa9139e</property>
+            <property name="tabs">
+                <tab-element name="66e31a72-fa55-4a8f-9b70-ef0f9aa9139e" id="146">
+                    <list-property name="userProperties">
+                        <structure>
+                            <property name="name">responsiveView</property>
+                            <property name="type">boolean</property>
+                        </structure>
+                        <structure>
+                            <property name="name">tabTheme</property>
+                            <property name="type">string</property>
+                        </structure>
+                    </list-property>
+                    <property name="responsiveView">true</property>
+                    <property name="tabTheme">SoftColorThemeReportItem.Soft color:Dark</property>
+                    <property name="title">Dashboard</property>
+                    <property name="backgroundColor">#1a6586</property>
+                    <property name="sections">
+                        <section id="147">
+                            <property name="width">50%</property>
+                            <property name="gadgets">
+                                <gadget name="Gadget_4cfcd09e-c547-449f-806d-30cfe517754d" id="152">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{}</property>
+                                    <property name="title">Entity Wise Invoice Summary</property>
+                                    <property name="showTitle">true</property>
+                                    <property name="showBorder">true</property>
+                                    <property name="zIndex">2</property>
+                                    <property name="showScrollBar">false</property>
+                                    <property name="height">246px</property>
+                                    <property name="caption">
+                                        <gadget-caption id="153">
+                                            <property name="showCaption">true</property>
+                                            <property name="horizontalAlignment">left</property>
+                                            <property name="fontFamily">"Lato"</property>
+                                            <property name="fontSize">16pt</property>
+                                            <property name="fontWeight">bold</property>
+                                            <property name="fontStyle">normal</property>
+                                            <property name="color">#FFFFFF</property>
+                                            <property name="textUnderline">none</property>
+                                        </gadget-caption>
+                                    </property>
+                                    <property name="content">
+                                        <data-view id="167">
+                                            <property name="gadgetType">viewer</property>
+                                            <property name="internalReportLetRef">Bar Chart - Data Model2_4e188fe2-fa92-40c8-b3a3-e06a435510ff</property>
+                                        </data-view>
+                                    </property>
+                                    <property name="observers">
+                                        <event-subscriber>
+                                            <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                            <property name="eventObjects">
+                                                <event-object>
+                                                    <property name="gadget">Gadget_cf1b68c0-8ba5-454d-b6b3-064452a4d261</property>
+                                                </event-object>
+                                                <event-object>
+                                                    <property name="gadget">Gadget_7d05ed14-7419-423b-be8f-c75d2c16ebf3</property>
+                                                </event-object>
+                                                <event-object>
+                                                    <property name="gadget">Gadget_64c493a5-0c29-467a-a47c-f9c4b3f542a1</property>
+                                                </event-object>
+                                            </property>
+                                        </event-subscriber>
+                                    </property>
+                                    <property name="subscribeTo">
+                                        <event-subscriber>
+                                            <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                            <property name="eventObjects">
+                                                <event-object>
+                                                    <property name="gadget">Gadget_cf1b68c0-8ba5-454d-b6b3-064452a4d261</property>
+                                                </event-object>
+                                                <event-object>
+                                                    <property name="gadget">Gadget_7d05ed14-7419-423b-be8f-c75d2c16ebf3</property>
+                                                </event-object>
+                                                <event-object>
+                                                    <property name="gadget">Gadget_64c493a5-0c29-467a-a47c-f9c4b3f542a1</property>
+                                                </event-object>
+                                            </property>
+                                        </event-subscriber>
+                                    </property>
+                                </gadget>
+                                <gadget name="1ef8b0f7-8ff8-4507-9e5b-a69c9ec983cb" id="149">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{}</property>
+                                    <property name="zIndex">1</property>
+                                    <property name="isVisible">false</property>
+                                    <property name="height">150px</property>
+                                    <property name="caption">
+                                        <gadget-caption id="151">
+                                            <property name="showCaption">true</property>
+                                            <property name="horizontalAlignment">left</property>
+                                            <property name="fontFamily">"Lato"</property>
+                                            <property name="fontSize">16pt</property>
+                                            <property name="fontWeight">bold</property>
+                                            <property name="color">#FFFFFF</property>
+                                        </gadget-caption>
+                                    </property>
+                                    <property name="content">
+                                        <current-selections id="150"/>
+                                    </property>
+                                </gadget>
+                                <gadget name="Gadget_7d05ed14-7419-423b-be8f-c75d2c16ebf3" id="172">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{"yAxisLabel":{},"xAxisTitle":{},"xAxisLabel":{},"chartTitleLabel":{},"yAxisTitle":{},"gadget-caption":{"fontSize":{"measure":12,"units":"pt"}}}</property>
+                                    <property name="title">Entity Wise Total Invoice Amount</property>
+                                    <property name="showTitle">true</property>
+                                    <property name="showBorder">true</property>
+                                    <property name="zIndex">4</property>
+                                    <property name="showScrollBar">false</property>
+                                    <property name="height">247px</property>
+                                    <property name="width">446px</property>
+                                    <property name="caption">
+                                        <gadget-caption id="173">
+                                            <property name="showCaption">true</property>
+                                            <property name="horizontalAlignment">left</property>
+                                            <property name="fontFamily">"Lato"</property>
+                                            <property name="fontSize">12pt</property>
+                                            <property name="fontWeight">normal</property>
+                                            <property name="fontStyle">normal</property>
+                                            <property name="color">#FFFFFF</property>
+                                            <property name="textUnderline">none</property>
+                                        </gadget-caption>
+                                    </property>
+                                    <property name="content">
+                                        <data-view id="175">
+                                            <property name="gadgetType">viewer</property>
+                                            <property name="internalReportLetRef">Bar Chart - Data Model2 2_178c2fbf-1e9b-403f-a89e-cf25c6d1a941</property>
+                                        </data-view>
+                                    </property>
+                                    <property name="observers">
+                                        <event-subscriber>
+                                            <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                            <property name="eventObjects">
+                                                <event-object>
+                                                    <property name="gadget">Gadget_4cfcd09e-c547-449f-806d-30cfe517754d</property>
+                                                </event-object>
+                                                <event-object>
+                                                    <property name="gadget">Gadget_cf1b68c0-8ba5-454d-b6b3-064452a4d261</property>
+                                                </event-object>
+                                                <event-object>
+                                                    <property name="gadget">Gadget_64c493a5-0c29-467a-a47c-f9c4b3f542a1</property>
+                                                </event-object>
+                                            </property>
+                                        </event-subscriber>
+                                    </property>
+                                    <property name="subscribeTo">
+                                        <event-subscriber>
+                                            <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                            <property name="eventObjects">
+                                                <event-object>
+                                                    <property name="gadget">Gadget_4cfcd09e-c547-449f-806d-30cfe517754d</property>
+                                                </event-object>
+                                                <event-object>
+                                                    <property name="gadget">Gadget_cf1b68c0-8ba5-454d-b6b3-064452a4d261</property>
+                                                </event-object>
+                                                <event-object>
+                                                    <property name="gadget">Gadget_64c493a5-0c29-467a-a47c-f9c4b3f542a1</property>
+                                                </event-object>
+                                            </property>
+                                        </event-subscriber>
+                                    </property>
+                                </gadget>
+                            </property>
+                        </section>
+                        <section id="148">
+                            <property name="width">50%</property>
+                            <property name="gadgets">
+                                <gadget name="Gadget_cf1b68c0-8ba5-454d-b6b3-064452a4d261" id="168">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{}</property>
+                                    <property name="title">Executive Wise Invoice Summary</property>
+                                    <property name="showTitle">true</property>
+                                    <property name="showBorder">true</property>
+                                    <property name="zIndex">3</property>
+                                    <property name="showScrollBar">false</property>
+                                    <property name="height">247px</property>
+                                    <property name="caption">
+                                        <gadget-caption id="169">
+                                            <property name="showCaption">true</property>
+                                            <property name="horizontalAlignment">left</property>
+                                            <property name="fontFamily">"Lato"</property>
+                                            <property name="fontSize">16pt</property>
+                                            <property name="fontWeight">bold</property>
+                                            <property name="fontStyle">normal</property>
+                                            <property name="color">#FFFFFF</property>
+                                            <property name="textUnderline">none</property>
+                                        </gadget-caption>
+                                    </property>
+                                    <property name="content">
+                                        <data-view id="171">
+                                            <property name="gadgetType">viewer</property>
+                                            <property name="internalReportLetRef">Bar Chart - Data Model2 1_b1e9c41a-fc81-42d8-aa40-344cd9e2006d</property>
+                                        </data-view>
+                                    </property>
+                                    <property name="observers">
+                                        <event-subscriber>
+                                            <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                            <property name="eventObjects">
+                                                <event-object>
+                                                    <property name="gadget">Gadget_4cfcd09e-c547-449f-806d-30cfe517754d</property>
+                                                </event-object>
+                                                <event-object>
+                                                    <property name="gadget">Gadget_7d05ed14-7419-423b-be8f-c75d2c16ebf3</property>
+                                                </event-object>
+                                                <event-object>
+                                                    <property name="gadget">Gadget_64c493a5-0c29-467a-a47c-f9c4b3f542a1</property>
+                                                </event-object>
+                                            </property>
+                                        </event-subscriber>
+                                    </property>
+                                    <property name="subscribeTo">
+                                        <event-subscriber>
+                                            <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                            <property name="eventObjects">
+                                                <event-object>
+                                                    <property name="gadget">Gadget_4cfcd09e-c547-449f-806d-30cfe517754d</property>
+                                                </event-object>
+                                                <event-object>
+                                                    <property name="gadget">Gadget_7d05ed14-7419-423b-be8f-c75d2c16ebf3</property>
+                                                </event-object>
+                                                <event-object>
+                                                    <property name="gadget">Gadget_64c493a5-0c29-467a-a47c-f9c4b3f542a1</property>
+                                                </event-object>
+                                            </property>
+                                        </event-subscriber>
+                                    </property>
+                                </gadget>
+                                <gadget name="Gadget_64c493a5-0c29-467a-a47c-f9c4b3f542a1" id="176">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">userPreferences</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="userPreferences">{"yAxisLabel":{},"xAxisTitle":{},"xAxisLabel":{},"chartTitleLabel":{},"yAxisTitle":{},"gadget-caption":{"fontSize":{"measure":12,"units":"pt"}}}</property>
+                                    <property name="title">Executive Wise Total Invoice Amount</property>
+                                    <property name="showTitle">true</property>
+                                    <property name="showBorder">true</property>
+                                    <property name="zIndex">5</property>
+                                    <property name="showScrollBar">false</property>
+                                    <property name="height">245px</property>
+                                    <property name="width">446px</property>
+                                    <property name="caption">
+                                        <gadget-caption id="177">
+                                            <property name="showCaption">true</property>
+                                            <property name="horizontalAlignment">left</property>
+                                            <property name="fontFamily">"Lato"</property>
+                                            <property name="fontSize">12pt</property>
+                                            <property name="fontWeight">normal</property>
+                                            <property name="fontStyle">normal</property>
+                                            <property name="color">#FFFFFF</property>
+                                            <property name="textUnderline">none</property>
+                                        </gadget-caption>
+                                    </property>
+                                    <property name="content">
+                                        <data-view id="232">
+                                            <property name="gadgetType">viewer</property>
+                                            <property name="internalReportLetRef">Bar Chart - Data Model2 3_c64405f7-3c53-452c-9553-b8c6b5edaa24</property>
+                                        </data-view>
+                                    </property>
+                                    <property name="observers">
+                                        <event-subscriber>
+                                            <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                            <property name="eventObjects">
+                                                <event-object>
+                                                    <property name="gadget">Gadget_4cfcd09e-c547-449f-806d-30cfe517754d</property>
+                                                </event-object>
+                                                <event-object>
+                                                    <property name="gadget">Gadget_7d05ed14-7419-423b-be8f-c75d2c16ebf3</property>
+                                                </event-object>
+                                                <event-object>
+                                                    <property name="gadget">Gadget_cf1b68c0-8ba5-454d-b6b3-064452a4d261</property>
+                                                </event-object>
+                                            </property>
+                                        </event-subscriber>
+                                    </property>
+                                    <property name="subscribeTo">
+                                        <event-subscriber>
+                                            <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                            <property name="eventObjects">
+                                                <event-object>
+                                                    <property name="gadget">Gadget_4cfcd09e-c547-449f-806d-30cfe517754d</property>
+                                                </event-object>
+                                                <event-object>
+                                                    <property name="gadget">Gadget_7d05ed14-7419-423b-be8f-c75d2c16ebf3</property>
+                                                </event-object>
+                                                <event-object>
+                                                    <property name="gadget">Gadget_cf1b68c0-8ba5-454d-b6b3-064452a4d261</property>
+                                                </event-object>
+                                            </property>
+                                        </event-subscriber>
+                                    </property>
+                                </gadget>
+                            </property>
+                        </section>
+                    </property>
+                </tab-element>
+            </property>
+        </dashboard>
+    </property>
+</report>

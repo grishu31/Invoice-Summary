@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analtics Reports</title>
+<link rel="stylesheet" href="CSS/inv.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="javascript/script.js"></script>
+</head>
+<body>
+<div class="navbar">
+    <a href="#" onclick="showBlankPage()">Home</a>
+   
+    <div class="dropdown">
+        <button class="dropbtn">Reports
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div id="dropdown-content" class="dropdown-content">
+            <a href="#" onclick="myFunction(0)">Invoice Summary</a>
+            <a href="#" onclick="myFunction(1)">Line Level Report</a>
+        </div>
+    </div>
+    <div class="invoice-summary">
+    <div class="image-container">
+            <img src="logo_new.png" alt="Invoice">
+        </div>
+        <h1 class="logo">FLSmidth</h1>
+        
+    </div>
+</div>
+ 
+<div id="blank-page">
+    <iframe src=" http://localhost:53478/iportal/dashboard?conf=C%3A%2FUsers%2FMuraai%2Fworkspace%2Fcar+colneProject%2FDashboard%2FPendings.dashboard&__resourceFolder=C%3A%5CUsers%5CMuraai%5Cworkspace%5Ccar+colneProject&__repositoryFolder=C%3A%2FUsers%2FMuraai%2Fworkspace%2Fcar+colneProject&filetype=dashboard&__vp=workgroup&__launchDesigner=true&__locale=en_IN"></iframe>
+</div>
+
+<div id="content">
+    <iframe src="http://127.0.0.1:53478/iportal/iv?__report=%2f%24%24%24Transient%2facfilee5e02387%2d7b12%2d4771%2d8524%2ddf5e25475623%2erptdocument&__design=C%3a%2fUsers%2fMuraai%2fworkspace%2fcar%20colneProject%2fReport%20Designs%2finv%5fsummary%2erptdesign&connectionHandle=30&__vp=workgroup&__locale=en_IN&__svg=true&__rtl=false&__timezone=Asia/Calcutta&__asattachment=false&otToken=VH84-QHM8-Y9ST-B03M-L14B-FU3K-5F18-NTJS"></iframe>
+</div>
+ 
+<div id="content1">
+    <iframe src="http://127.0.0.1:53478/iportal/iv?__report=%2f%24%24%24Transient%2facfile7de03b52%2d859a%2d47c9%2db5ad%2d305939af23b4%2erptdocument&__design=C%3a%2fUsers%2fMuraai%2fworkspace%2fcar%20colneProject%2fReport%20Designs%2finv%5fsummary2%2erptdesign&connectionHandle=547&__vp=workgroup&__locale=en_IN&__svg=true&__rtl=false&__timezone=Asia/Calcutta&__asattachment=false&otToken=KVAX-SEVM-KUXU-0OCS-FYUU-WS41-10JU-B5CT"></iframe>
+</div>
+ 
+<script>
+function myFunction(index) {
+    var iframe1 = document.getElementById("content");
+    var iframe2 = document.getElementById("content1");
+    var blankPage = document.getElementById("blank-page");
+
+    blankPage.style.display = "none";
+
+    if (index === 0) {
+        iframe1.style.display = "block";
+        iframe2.style.display = "none";
+    } else if (index === 1) {
+        iframe1.style.display = "none";
+        iframe2.style.display = "block";
+    }
+}
+
+/*function showBlankPage() {
+    var blankPage = document.getElementById("blank-page");
+    var iframes = document.querySelectorAll("#content, #content1");
+
+    blankPage.style.display = "block";
+    iframes.forEach(function(iframe) {
+        iframe.style.display = "none";
+    });
+}*/
+function showBlankPage(){
+	var iframe1 = document.getElementById("blank-page");
+	 
+	
+}
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,1071 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.24.0.v202305170658</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="2">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+            <property name="odaURL">jdbc:sqlserver://flsmidth-prod-dbs.database.windows.net:1433;database=sims;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;</property>
+            <property name="odaUser">sql_server_admin</property>
+            <encrypted-property name="odaPassword" encryptionID="jce">e7f8c55d47a016359f103ee44ce6c13abd57281372e3e3f4caab65efdde92e0b</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="HeadercountData Set" id="3">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">invoice_no</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">invoice_no</text-property>
+                    <text-property name="heading">invoice_no</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Entity</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Entity</text-property>
+                    <text-property name="heading">Entity</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">vendor</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">vendor</text-property>
+                    <text-property name="heading">vendor</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">vendor_name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">vendor_name</text-property>
+                    <text-property name="heading">vendor_name</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">invoice_status</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">invoice_status</text-property>
+                    <text-property name="heading">invoice_status</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">invoice_po</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">invoice_po</text-property>
+                    <text-property name="heading">invoice_po</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">grand_total</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">grand_total</text-property>
+                    <text-property name="heading">grand_total</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">invoice_recieved_date</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">invoice_recieved_date</text-property>
+                    <text-property name="heading">invoice_recieved_date</text-property>
+                    <property name="horizontalAlign">left</property>
+                    <structure name="valueFormat">
+                        <property name="category">Custom</property>
+                        <property name="pattern">dd/MM/yyyy</property>
+                    </structure>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">invoice_no</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Entity</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">vendor</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">vendor_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">invoice_status</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">invoice_po</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">grand_total</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">invoice_recieved_date</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">invoice_no</property>
+                    <property name="nativeName">invoice_no</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Entity</property>
+                    <property name="nativeName">Entity</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">vendor</property>
+                    <property name="nativeName">vendor</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">vendor_name</property>
+                    <property name="nativeName">vendor_name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">invoice_status</property>
+                    <property name="nativeName">invoice_status</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">invoice_po</property>
+                    <property name="nativeName">invoice_po</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">grand_total</property>
+                    <property name="nativeName">grand_total</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">3</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">invoice_recieved_date</property>
+                    <property name="nativeName">invoice_recieved_date</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">93</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[SELECT 
+	a.invoice_no,
+	a.entity_id as Entity,
+	a.vendor,
+	MVM.vendor_name,
+	c.invoice_status, 
+	a.invoice_po,
+	a.grand_total,
+	a.invoice_recieved_date
+from invoice_header as a
+left join invoice_header_status as b on a.invoice_no =b.invoice_no and a.internal_doc_id=b.internal_doc_id 
+left join mtr_invoice_status as c on b.err_id = c.id
+JOIN sims_mtr_vendor_master MVM ON MVM.vendor_code = a.vendor
+
+select a.invoice_no,a.entity_id as Entity,a.vendor,MVM.vendor_name,c.invoice_status, a.invoice_po,a.grand_total,
+a.invoice_recieved_date
+from invoice_header as a
+left join invoice_header_status as b on a.invoice_no =b.invoice_no
+and a.internal_doc_id=b.internal_doc_id 
+left join mtr_invoice_status as c on b.err_id = c.id
+JOIN sims_mtr_vendor_master MVM ON MVM.vendor_code = a.vendor]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>invoice_no</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>invoice_no</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>invoice_no</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Entity</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Entity</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Entity</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>vendor</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>vendor</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>vendor</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>vendor_name</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>150</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>vendor_name</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>vendor_name</design:label>
+            <design:formattingHints>
+              <design:displaySize>150</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>invoice_status</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>invoice_status</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>invoice_status</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>invoice_po</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>invoice_po</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>invoice_po</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>grand_total</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>3</design:nativeDataTypeCode>
+            <design:precision>18</design:precision>
+            <design:scale>2</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>grand_total</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>grand_total</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ReceievedMonth</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>30</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ReceievedMonth</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ReceievedMonth</design:label>
+            <design:formattingHints>
+              <design:displaySize>30</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="pendingwithcountData Set" id="17">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Entity</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Entity</text-property>
+                    <text-property name="heading">Entity</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">invoice_no</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">invoice_no</text-property>
+                    <text-property name="heading">invoice_no</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">internal_doc_id</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">internal_doc_id</text-property>
+                    <text-property name="heading">internal_doc_id</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">role_description</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">role_description</text-property>
+                    <text-property name="heading">role_description</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">HdrStatus</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">HdrStatus</text-property>
+                    <text-property name="heading">HdrStatus</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">pendingWith</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">pendingWith</text-property>
+                    <text-property name="heading">pendingWith</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">invoice_recieved_date</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">invoice_recieved_date</text-property>
+                    <text-property name="heading">invoice_recieved_date</text-property>
+                    <property name="horizontalAlign">left</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">invoice_po</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">invoice_po</text-property>
+                    <text-property name="heading">invoice_po</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">vendor_name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">vendor_name</text-property>
+                    <text-property name="heading">vendor_name</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">grand_total</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">grand_total</text-property>
+                    <text-property name="heading">grand_total</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Entity</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">invoice_no</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">internal_doc_id</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">role_description</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">HdrStatus</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">pendingWith</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">invoice_recieved_date</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">invoice_po</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">vendor_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">grand_total</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Entity</property>
+                    <property name="nativeName">Entity</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">invoice_no</property>
+                    <property name="nativeName">invoice_no</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">internal_doc_id</property>
+                    <property name="nativeName">internal_doc_id</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">role_description</property>
+                    <property name="nativeName">role_description</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">HdrStatus</property>
+                    <property name="nativeName">HdrStatus</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">pendingWith</property>
+                    <property name="nativeName">pendingWith</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">invoice_recieved_date</property>
+                    <property name="nativeName">invoice_recieved_date</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">93</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">invoice_po</property>
+                    <property name="nativeName">invoice_po</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">vendor_name</property>
+                    <property name="nativeName">vendor_name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">grand_total</property>
+                    <property name="nativeName">grand_total</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">3</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select distinct Entity,invoice_no,internal_doc_id,
+role_description,HdrStatus,pendingWith,invoice_recieved_date,invoice_po,vendor_name,grand_total from(
+select distinct ih.entity_id as Entity,ih.invoice_no,ih.internal_doc_id,ih.invoice_po,ih.grand_total,MVM.vendor_name,
+ih.invoice_recieved_date,
+sims_mtr_roles.ud_role_desc role_description,
+STUFF((SELECT ',' + LTRIM(RTRIM((convert(char(100),MIS.invoice_status)))) 
+FROM invoice_header_status b 
+left join mtr_invoice_status as MIS on b.err_id = MIS.id 
+where ih.invoice_no = b.invoice_no 
+--- added condition
+and ih.internal_doc_id=b.internal_doc_id
+-- condition ends here
+
+FOR XML PATH('')),1,1,'') as HdrStatus,
+CASE WHEN ( sims_mtr_roles.ud_role_desc is null) THEN 'Unassigned'
+WHEN ( sims_mtr_roles.ud_role_desc ='AP Processor') THEN 'AP Processor'
+WHEN ( sims_mtr_roles.ud_role_desc ='AP Supervisor' ) THEN 'AP Supervisor'
+WHEN ( sims_mtr_roles.ud_role_desc ='Approver' or  sims_mtr_roles.ud_role_desc ='Requestor' ) THEN 'Approver/Requestor'
+WHEN ( sims_mtr_roles.ud_role_desc ='Buyer' ) THEN 'Buyer'
+END as pendingWith
+from invoice_header ih
+left JOIN sims_mtr_vendor_master MVM ON MVM.vendor_code = ih.vendor
+left join win_user_details on ih.pending_with=win_user_details.ud_userid
+left join sims_mtr_roles on win_user_details.ud_role=sims_mtr_roles.ud_role
+where (posting_doc_no is null or posting_doc_no='') 
+
+)as X
+where 
+X.HdrStatus not like '%Invoice Posted%' and 
+X.HdrStatus not like '%Invoice Cancelled%'
+and X.HdrStatus not like '%Duplicate Invoice%']]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="statuscountdemoData Set" id="43">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">invoice_no</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">invoice_no</text-property>
+                    <text-property name="heading">invoice_no</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">entity_id</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">entity_id</text-property>
+                    <text-property name="heading">entity_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">vendor</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">vendor</text-property>
+                    <text-property name="heading">vendor</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">invoice_recieved_date</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">invoice_recieved_date</text-property>
+                    <text-property name="heading">invoice_recieved_date</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">vendor_name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">vendor_name</text-property>
+                    <text-property name="heading">vendor_name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ReceievedMonth</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ReceievedMonth</text-property>
+                    <text-property name="heading">ReceievedMonth</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">grand_total</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">grand_total</text-property>
+                    <text-property name="heading">grand_total</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">processed_by</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">processed_by</text-property>
+                    <text-property name="heading">processed_by</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">posting_status</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">posting_status</text-property>
+                    <text-property name="heading">posting_status</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">YEAR</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">YEAR</text-property>
+                    <text-property name="heading">YEAR</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">invoice_status</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">invoice_status</text-property>
+                    <text-property name="heading">invoice_status</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">invoice_no</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">entity_id</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">vendor</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">invoice_recieved_date</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">vendor_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">ReceievedMonth</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">grand_total</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">processed_by</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">posting_status</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">YEAR</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">invoice_status</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">invoice_no</property>
+                    <property name="nativeName">invoice_no</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">entity_id</property>
+                    <property name="nativeName">entity_id</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">vendor</property>
+                    <property name="nativeName">vendor</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">invoice_recieved_date</property>
+                    <property name="nativeName">invoice_recieved_date</property>
+                    <property name="dataType">date-time</property>
+                    <property name="nativeDataType">93</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">vendor_name</property>
+                    <property name="nativeName">vendor_name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">ReceievedMonth</property>
+                    <property name="nativeName">ReceievedMonth</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">grand_total</property>
+                    <property name="nativeName">grand_total</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">3</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">processed_by</property>
+                    <property name="nativeName">processed_by</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">posting_status</property>
+                    <property name="nativeName">posting_status</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">YEAR</property>
+                    <property name="nativeName">YEAR</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">invoice_status</property>
+                    <property name="nativeName">invoice_status</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[
+select a.invoice_no,
+		a.entity_id,
+		a.vendor,
+		a.invoice_recieved_date,
+		MVM.vendor_name,
+		datename(month, a.invoice_recieved_date) AS ReceievedMonth,
+		a.grand_total,
+		a.processed_by,
+
+		CASE WHEN ( c.invoice_status ='Invoice Posted') THEN 'Invoice Posted'
+		ELSE 'Not Posted'
+		END as posting_status,
+
+		DATEPART(yyyy, invoice_recieved_date) as YEAR,
+		c.invoice_status 
+
+from invoice_header as a
+left join invoice_header_status as b on a.invoice_no =b.invoice_no and a.internal_doc_id=b.internal_doc_id 
+left join mtr_invoice_status as c on b.err_id = c.id 
+JOIN sims_mtr_vendor_master MVM ON MVM.vendor_code = a.vendor
+where c.invoice_status is not null]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <property name="linkedDataModels">
+        <linked-data-model name="Data Model" id="4">
+            <property name="aliasDataSets">
+                <alias-data-set name="HeadercountData Set" id="14">
+                    <property name="originDataSet">HeadercountData Set</property>
+                </alias-data-set>
+            </property>
+            <property name="categories">
+                <category name="HeadercountData Set" id="5">
+                    <property name="categoryColumns">
+                        <category-column name="invoice_no" id="6">
+                            <property name="aliasDataSet">Data Model/HeadercountData Set</property>
+                            <property name="resultSetColumnName">invoice_no</property>
+                        </category-column>
+                        <category-column name="Entity" id="7">
+                            <property name="aliasDataSet">Data Model/HeadercountData Set</property>
+                            <property name="resultSetColumnName">Entity</property>
+                        </category-column>
+                        <category-column name="vendor" id="8">
+                            <property name="aliasDataSet">Data Model/HeadercountData Set</property>
+                            <property name="resultSetColumnName">vendor</property>
+                        </category-column>
+                        <category-column name="vendor_name" id="9">
+                            <property name="aliasDataSet">Data Model/HeadercountData Set</property>
+                            <property name="resultSetColumnName">vendor_name</property>
+                        </category-column>
+                        <category-column name="invoice_status" id="10">
+                            <property name="aliasDataSet">Data Model/HeadercountData Set</property>
+                            <property name="resultSetColumnName">invoice_status</property>
+                        </category-column>
+                        <category-column name="invoice_po" id="11">
+                            <property name="aliasDataSet">Data Model/HeadercountData Set</property>
+                            <property name="resultSetColumnName">invoice_po</property>
+                        </category-column>
+                        <category-column name="grand_total" id="12">
+                            <property name="aliasDataSet">Data Model/HeadercountData Set</property>
+                            <property name="resultSetColumnName">grand_total</property>
+                        </category-column>
+                        <category-column name="invoice_recieved_date" id="81">
+                            <property name="aliasDataSet">Data Model/HeadercountData Set</property>
+                            <property name="resultSetColumnName">invoice_recieved_date</property>
+                        </category-column>
+                    </property>
+                </category>
+            </property>
+            <property name="measureGroups">
+                <measure-group name="Status Count" id="15">
+                    <property name="measures">
+                        <measure name="Count" id="16">
+                            <property name="aggregateFunction">count</property>
+                            <expression name="measureExpression" type="javascript">dataSetRow["invoice_no"]</expression>
+                            <property name="isCalculated">false</property>
+                            <property name="dataType">integer</property>
+                            <property name="alignment">right</property>
+                            <property name="isVisible">true</property>
+                        </measure>
+                    </property>
+                </measure-group>
+            </property>
+            <property name="pushDown">true</property>
+        </linked-data-model>
+        <linked-data-model name="Data Model1" id="18">
+            <property name="aliasDataSets">
+                <alias-data-set name="pendingwithcountData Set" id="40">
+                    <property name="originDataSet">pendingwithcountData Set</property>
+                </alias-data-set>
+            </property>
+            <property name="categories">
+                <category name="pendingwithcountData Set" id="28">
+                    <property name="categoryColumns">
+                        <category-column name="Entity1" id="29">
+                            <property name="aliasDataSet">Data Model1/pendingwithcountData Set</property>
+                            <property name="resultSetColumnName">Entity</property>
+                        </category-column>
+                        <category-column name="invoice_no1" id="30">
+                            <property name="aliasDataSet">Data Model1/pendingwithcountData Set</property>
+                            <property name="resultSetColumnName">invoice_no</property>
+                        </category-column>
+                        <category-column name="internal_doc_id" id="31">
+                            <property name="aliasDataSet">Data Model1/pendingwithcountData Set</property>
+                            <property name="resultSetColumnName">internal_doc_id</property>
+                        </category-column>
+                        <category-column name="role_description" id="32">
+                            <property name="aliasDataSet">Data Model1/pendingwithcountData Set</property>
+                            <property name="resultSetColumnName">role_description</property>
+                        </category-column>
+                        <category-column name="HdrStatus" id="33">
+                            <property name="aliasDataSet">Data Model1/pendingwithcountData Set</property>
+                            <property name="resultSetColumnName">HdrStatus</property>
+                        </category-column>
+                        <category-column name="pendingWith" id="34">
+                            <property name="aliasDataSet">Data Model1/pendingwithcountData Set</property>
+                            <property name="resultSetColumnName">pendingWith</property>
+                        </category-column>
+                        <category-column name="invoice_po1" id="36">
+                            <property name="aliasDataSet">Data Model1/pendingwithcountData Set</property>
+                            <property name="resultSetColumnName">invoice_po</property>
+                        </category-column>
+                        <category-column name="vendor_name1" id="37">
+                            <property name="aliasDataSet">Data Model1/pendingwithcountData Set</property>
+                            <property name="resultSetColumnName">vendor_name</property>
+                        </category-column>
+                        <category-column name="grand_total1" id="38">
+                            <property name="aliasDataSet">Data Model1/pendingwithcountData Set</property>
+                            <property name="resultSetColumnName">grand_total</property>
+                        </category-column>
+                        <category-column name="invoice_recieved_date" id="80">
+                            <property name="aliasDataSet">Data Model1/pendingwithcountData Set</property>
+                            <property name="resultSetColumnName">invoice_recieved_date</property>
+                        </category-column>
+                    </property>
+                </category>
+            </property>
+            <property name="measureGroups">
+                <measure-group name="count" id="41">
+                    <property name="measures">
+                        <measure name="count" id="42">
+                            <property name="aggregateFunction">count</property>
+                            <expression name="measureExpression" type="javascript">dataSetRow["invoice_no1"]</expression>
+                            <property name="isCalculated">false</property>
+                            <property name="dataType">integer</property>
+                            <property name="alignment">right</property>
+                            <property name="isVisible">true</property>
+                        </measure>
+                    </property>
+                </measure-group>
+            </property>
+            <property name="pushDown">true</property>
+        </linked-data-model>
+        <linked-data-model name="Data Model2" id="44">
+            <property name="aliasDataSets">
+                <alias-data-set name="statuscountdemoData Set" id="79">
+                    <property name="originDataSet">statuscountdemoData Set</property>
+                </alias-data-set>
+            </property>
+            <property name="categories">
+                <category name="statuscountdemoData Set" id="65">
+                    <property name="categoryColumns">
+                        <category-column name="invoice_no2" id="66">
+                            <property name="aliasDataSet">Data Model2/statuscountdemoData Set</property>
+                            <property name="resultSetColumnName">invoice_no</property>
+                        </category-column>
+                        <category-column name="entity_id" id="67">
+                            <property name="aliasDataSet">Data Model2/statuscountdemoData Set</property>
+                            <property name="resultSetColumnName">entity_id</property>
+                        </category-column>
+                        <category-column name="vendor1" id="68">
+                            <property name="aliasDataSet">Data Model2/statuscountdemoData Set</property>
+                            <property name="resultSetColumnName">vendor</property>
+                        </category-column>
+                        <category-column name="invoice_recieved_date" id="69">
+                            <property name="aliasDataSet">Data Model2/statuscountdemoData Set</property>
+                            <property name="resultSetColumnName">invoice_recieved_date</property>
+                        </category-column>
+                        <category-column name="vendor_name2" id="70">
+                            <property name="aliasDataSet">Data Model2/statuscountdemoData Set</property>
+                            <property name="resultSetColumnName">vendor_name</property>
+                        </category-column>
+                        <category-column name="ReceievedMonth2" id="71">
+                            <property name="aliasDataSet">Data Model2/statuscountdemoData Set</property>
+                            <property name="resultSetColumnName">ReceievedMonth</property>
+                        </category-column>
+                        <category-column name="grand_total2" id="72">
+                            <property name="aliasDataSet">Data Model2/statuscountdemoData Set</property>
+                            <property name="resultSetColumnName">grand_total</property>
+                        </category-column>
+                        <category-column name="processed_by" id="73">
+                            <property name="aliasDataSet">Data Model2/statuscountdemoData Set</property>
+                            <property name="resultSetColumnName">processed_by</property>
+                        </category-column>
+                        <category-column name="posting_status" id="74">
+                            <property name="aliasDataSet">Data Model2/statuscountdemoData Set</property>
+                            <property name="resultSetColumnName">posting_status</property>
+                        </category-column>
+                        <category-column name="YEAR" id="75">
+                            <property name="aliasDataSet">Data Model2/statuscountdemoData Set</property>
+                            <property name="resultSetColumnName">YEAR</property>
+                        </category-column>
+                        <category-column name="invoice_status1" id="76">
+                            <property name="aliasDataSet">Data Model2/statuscountdemoData Set</property>
+                            <property name="resultSetColumnName">invoice_status</property>
+                        </category-column>
+                    </property>
+                </category>
+            </property>
+            <property name="pushDown">true</property>
+        </linked-data-model>
+    </property>
+</datamart>
